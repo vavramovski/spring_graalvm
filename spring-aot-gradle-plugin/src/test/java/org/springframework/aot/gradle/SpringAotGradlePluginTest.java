@@ -42,6 +42,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class SpringAotGradlePluginTest {
 
+
 	@Test
 	void pluginRegistersAotSourceSet() {
 		Project project = createTestProject();

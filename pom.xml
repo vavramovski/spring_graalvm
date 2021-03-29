@@ -25,8 +25,8 @@
 		<module>spring-native</module>
 		<module>spring-aot</module>
 		<module>spring-aot-maven-plugin</module>
-		<module>spring-aot-gradle-plugin</module>
-		<module>org.springframework.experimental.aot.gradle.plugin</module>
+<!--		<module>spring-aot-gradle-plugin</module>-->
+<!--		<module>org.springframework.experimental.aot.gradle.plugin</module>-->
 		<module>spring-native-docs</module>
 	</modules>
 
@@ -37,11 +37,22 @@
 				<artifactId>spring-aot</artifactId>
 				<version>${project.version}</version>
 			</dependency>
-			<dependency>
+			<!--<dependency>
 				<groupId>org.springframework.experimental</groupId>
 				<artifactId>spring-aot-gradle-plugin</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-gradle-plugin</artifactId>
+				<version>${spring.boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.spring.gradle</groupId>
+				<artifactId>dependency-management-plugin</artifactId>
+				<version>1.0.11.RELEASE</version>
+			</dependency>
+			-->
 			<dependency>
 				<groupId>org.springframework.experimental</groupId>
 				<artifactId>spring-native</artifactId>
@@ -63,11 +74,6 @@
 				<version>${spring.boot.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-gradle-plugin</artifactId>
-				<version>${spring.boot.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
@@ -105,11 +111,6 @@
 				<groupId>io.grpc</groupId>
 				<artifactId>grpc-protobuf</artifactId>
 				<version>1.22.1</version>
-			</dependency>
-			<dependency>
-				<groupId>io.spring.gradle</groupId>
-				<artifactId>dependency-management-plugin</artifactId>
-				<version>1.0.11.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.graalvm.nativeimage</groupId>
@@ -222,6 +223,7 @@
 						</archive>
 					</configuration>
 				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-invoker-plugin</artifactId>
